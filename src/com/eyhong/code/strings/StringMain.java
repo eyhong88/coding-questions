@@ -1,5 +1,7 @@
 package com.eyhong.code.strings;
 
+import com.eyhong.code.strings.easy.ReverseVowelsOnly;
+
 public class StringMain {
 
     public static void main(String[] args) {

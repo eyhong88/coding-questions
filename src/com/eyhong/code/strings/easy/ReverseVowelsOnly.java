@@ -1,4 +1,4 @@
-package com.eyhong.code.strings;
+package com.eyhong.code.strings.easy;
 
 import java.util.*;
 
@@ -6,11 +6,11 @@ import java.util.*;
  * https://leetcode.com/problems/reverse-vowels-of-a-string/
  *
  */
-class ReverseVowelsOnly {
+public class ReverseVowelsOnly {
 
     List<Character> vowelList = new ArrayList<>(Arrays.asList('a', 'e', 'i', 'o', 'u','A', 'E', 'I', 'O', 'U'));
 
-    String reverseVowels(String s) {
+    public String reverseVowels(String s) {
         Stack<Character> st = new Stack<>();
         char[] arr = s.toCharArray();
         for(Character c : arr){
