@@ -1,9 +1,6 @@
 package com.eyhong.code.strings.medium;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * https://leetcode.com/problems/find-and-replace-pattern/
@@ -21,9 +18,8 @@ import java.util.Map;
 */
 public class FindAndReplacePattern {
 
-    Map<Character, Integer> patternLetterMap;
-    Map<Character, Integer> arrLetterMap;
-
+//    Map<Character, Integer> patternLetterMap;
+//    Map<Character, Integer> arrLetterMap;
     /*public List<String> findAndReplacePattern(String[] words, String pattern) {
 //        for(Character c : pattern.toCharArray()){
 //            int count = patternLetterMap.get(c);
@@ -64,8 +60,7 @@ public class FindAndReplacePattern {
 
         return result;
     }*/
-
-    public List<String> findAndReplacePattern(String[] words, String pattern) {
+    /*public List<String> findAndReplacePattern(String[] words, String pattern) {
 
         List<String> result = new ArrayList<>();
 
@@ -114,6 +109,68 @@ public class FindAndReplacePattern {
             }
         }
         return result;
+    }*/
 
+    public List<String> findAndReplacePattern(String[] words, String pattern) {
+        Map<Character, List<Integer>> pm = new HashMap<>();
+
+        List<String> result = new ArrayList<>();
+        char[] pa = pattern.toCharArray();
+
+        populateMap(pm, pa);
+
+        // Loop through the list of words and for each word process accordingly.
+        for(String word : words) {
+            if (word.length() != pattern.length()) {
+                continue;
+            }
+
+            Map<Character, List<Integer>> wm = new HashMap<>();
+
+            boolean isMatch = true;
+            char[] wa = word.toCharArray();
+
+            populateMap(wm, wa);
+
+            // Loop through each List and determine if they have the same index values.
+            for(int i = 0; i < pa.length; i++){
+                List<Integer> pl = pm.get(pa[i]);
+                List<Integer> wl = wm.get(wa[i]);
+
+                if(pl.size() == wl.size()) {
+                    for(int p = 0; p < pl.size(); p++){
+                        if(!pl.get(p).equals(wl.get(p))){
+                            isMatch = false;
+                            break;
+                        }
+                    }
+                } else {
+                    isMatch = false;
+                    break;
+                }
+
+                if(!isMatch){
+                    break;
+                }
+            }
+
+            if(isMatch){
+                result.add(word);
+            }
+        }
+
+        return result;
+    }
+
+    private void populateMap(Map<Character, List<Integer>> pm, char[] pa){
+        for(int i = 0; i < pa.length; i++){
+            List<Integer> pl = pm.getOrDefault(pa[i], new ArrayList<>());
+
+            // Add the index to the list
+            pl.add(i);
+
+            //Do I even need this? Won't it automatically be put on?
+            pm.put(pa[i], pl);
+        }
     }
 }

@@ -17,8 +17,8 @@ public class StringMain {
 //        ReverseVowelsOnly reverseVowelsOnly = new ReverseVowelsOnly();
 //        System.out.println(reverseVowelsOnly.reverseVowels("Aa"));
 
-        String[] words = {/*"abc","cba","xyx","yxx","yyx"*/"xyx"};
-        String pattern = "abc";
+        String[] words = {"abc","deq","mee","aqq","dkd","ccc"};
+        String pattern = "abb";
         FindAndReplacePattern findAndReplacePattern = new FindAndReplacePattern();
         List<String> result = findAndReplacePattern.findAndReplacePattern(words, pattern);
 
