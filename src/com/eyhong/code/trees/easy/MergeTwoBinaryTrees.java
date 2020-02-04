@@ -2,6 +2,8 @@ package com.eyhong.code.trees.easy;
 
 //https://leetcode.com/problems/merge-two-binary-trees/
 
+import com.eyhong.code.trees.TreeNode;
+
 /**
  *
  * Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.
@@ -30,17 +32,9 @@ package com.eyhong.code.trees.easy;
  *
  */
 public class MergeTwoBinaryTrees {
-    public static class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-        public TreeNode(int x) { val = x; }
-    }
     public void mergeTrees(TreeNode t1, TreeNode t2) {
         TreeNode s = calculate(t1, t2);
-
     }
-
     private TreeNode calculate(TreeNode branch1, TreeNode branch2) {
         if(null == branch1 && null == branch2) return null;
         if(null == branch1) return branch2;
