@@ -20,6 +20,8 @@ public class TreeMain {
         TreeNode levelNode = new TreeNode(3);
         levelNode.left = new TreeNode(9);
         levelNode.right = new TreeNode(20);
+//        levelNode.right.right = new TreeNode(7);
+//        levelNode.right.left = new TreeNode(15);
 
         System.out.println(levelOrderTree.levelOrder(levelNode));
     }
