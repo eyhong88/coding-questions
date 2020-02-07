@@ -2,6 +2,7 @@ package com.eyhong.code.strings;
 
 import com.eyhong.code.strings.easy.ReverseVowelsOnly;
 import com.eyhong.code.strings.medium.FindAndReplacePattern;
+import com.eyhong.code.strings.medium.LongestSubstringWORepeatingCharacters;
 import com.eyhong.code.strings.medium.PalindromicSubStrings;
 
 import java.util.List;
@@ -26,8 +27,14 @@ public class StringMain {
 //        for(String s : result)
 //            System.out.println(s);
 
-        palindromicSubstring("aaa");
+//        palindromicSubstring("aaa");
 
+        longestSubstringWORepeatingCharacters("bpfbhmipx");
+    }
+
+    private static void longestSubstringWORepeatingCharacters(String s) {
+        LongestSubstringWORepeatingCharacters longest = new LongestSubstringWORepeatingCharacters();
+        System.out.println(longest.lengthOfLongestSubstring(s));
     }
 
     private static void palindromicSubstring(String str) {
