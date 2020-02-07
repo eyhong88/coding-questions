@@ -28,45 +28,29 @@ import java.util.Map;
  *              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
 public class LongestSubstringWORepeatingCharacters {
-    public int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring(String s) {int result = 0;
+
         List<Character> charList = new ArrayList<>();
-        int currMax = 0;
-        int result = 0;
-        int sLength = s.length();
 
-        for(int i = 0; i < sLength; i++){
-            char currChar = s.charAt(i);
-
-            if(!charList.contains(currChar)){
-                currMax++;
-                charList.add(currChar);
-                if(i == sLength-1)
-                    return Math.max(result,currMax);
-
-            } else {
-                if(currMax >= result) {
-                    result = currMax;
-                    currMax = 0;
+        for(int i = 0; i < s.length(); i++){
+            for(int j = i; j < s.length(); j++){
+                if(!charList.contains(s.charAt(j))) {
+                    charList.add(s.charAt(j));
                 }
-
-                //Find the index of the repeated character starts.
-                String temp = s.substring((i-charList.size()),i);
-                charList.clear();
-
-                //If the repeated character was the previous character, then continue.
-                //Otherwise need to move the index back.
-                if(temp.indexOf(currChar) + 1 != temp.length()){
-                    i = i - (temp.length()-s.indexOf(s.charAt(i)));
-                    currMax = 0;
-                }
-                else {
-                    currMax++;
-                    charList.add(currChar);
-                }
-
+                else
+                    break;
             }
-            System.out.println(charList);
+            if(charList.size() > result){
+                result = charList.size();
+            }
+
+            //Don't do extra iterations if not necessary
+            if(s.length() - i < result)
+                break;
+
+            charList.clear();
         }
+
         return result;
     }
 }

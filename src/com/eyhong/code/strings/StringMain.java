@@ -29,7 +29,7 @@ public class StringMain {
 
 //        palindromicSubstring("aaa");
 
-        longestSubstringWORepeatingCharacters("bpfbhmipx");
+        longestSubstringWORepeatingCharacters("abcabc");
     }
 
     private static void longestSubstringWORepeatingCharacters(String s) {
