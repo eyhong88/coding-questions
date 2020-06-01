@@ -1,5 +1,7 @@
 package com.eyhong.code.trees.easy;
 
+import com.eyhong.code.trees.TreeNode;
+
 /**
  * https://leetcode.com/problems/maximum-depth-of-binary-tree/
  * 
@@ -21,13 +23,6 @@ package com.eyhong.code.trees.easy;
  * return its depth = 3.
  */
 public class MaxDepthBinaryTree {
-    public static class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-        public TreeNode(int x) { val = x; }
-    }
-
     public int maxDepth(TreeNode root) {
         return calcDepth(root);
     }
