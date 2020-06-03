@@ -29,7 +29,7 @@ import java.util.List;
  */
 public class GenerateParentheses {
     public static void main(String[] args){
-        System.out.println(generateParenthesis(3));
+        System.out.println(generateParenthesis(2));
     }
     public static List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
@@ -45,8 +45,10 @@ public class GenerateParentheses {
         if(close > open)
             return;
 
-        if((open & close) == n)
+        if((open & close) == n) {
             result.add(val);
+            return;
+        }
 
         if(open < n){
             parenthesis(result, val+"(", n, open + 1, close);
