@@ -1,8 +1,8 @@
-package com.eyhong.code.trees.easy;
+package com.eyhong.code.tree.easy;
 
 //https://leetcode.com/problems/merge-two-binary-trees/
 
-import com.eyhong.code.trees.TreeNode;
+import com.eyhong.code.tree.TreeNode;
 
 /**
  *

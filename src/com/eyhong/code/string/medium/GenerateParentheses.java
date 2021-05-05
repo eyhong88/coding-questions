@@ -1,6 +1,4 @@
-package com.eyhong.code.strings.medium;
-
-import java.util.List;
+package com.eyhong.code.string.medium;
 
 /**
  * https://leetcode.com/problems/generate-parentheses/

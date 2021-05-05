@@ -1,9 +1,7 @@
-package com.eyhong.code.strings.medium;
+package com.eyhong.code.string.medium;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/

@@ -1,9 +1,9 @@
-package com.eyhong.code.trees;
+package com.eyhong.code.tree;
 
-import com.eyhong.code.trees.easy.MaxDepthBinaryTree;
-import com.eyhong.code.trees.easy.MergeTwoBinaryTrees;
-import com.eyhong.code.trees.easy.MinDepthBinaryTree;
-import com.eyhong.code.trees.medium.LevelOrderBinaryTree;
+import com.eyhong.code.tree.easy.MaxDepthBinaryTree;
+import com.eyhong.code.tree.easy.MergeTwoBinaryTrees;
+import com.eyhong.code.tree.easy.MinDepthBinaryTree;
+import com.eyhong.code.tree.medium.LevelOrderBinaryTree;
 
 public class TreeMain {
 

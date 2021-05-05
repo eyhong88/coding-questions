@@ -1,4 +1,4 @@
-package com.eyhong.code.trees;
+package com.eyhong.code.tree;
 
 public class TreeNode {
     public int val;

@@ -1,4 +1,4 @@
-package com.eyhong.code.strings.easy;
+package com.eyhong.code.string.easy;
 
 public class ReverseLettersOnly {
 

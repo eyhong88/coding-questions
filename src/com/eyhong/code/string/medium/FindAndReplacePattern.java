@@ -1,4 +1,4 @@
-package com.eyhong.code.strings.medium;
+package com.eyhong.code.string.medium;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
-package com.eyhong.code.trees.medium;
+package com.eyhong.code.tree.medium;
 
-import com.eyhong.code.trees.TreeNode;
+import com.eyhong.code.tree.TreeNode;
 
 import java.util.List;
 

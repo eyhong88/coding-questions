@@ -1,6 +1,6 @@
-package com.eyhong.code.trees.easy;
+package com.eyhong.code.tree.easy;
 
-import com.eyhong.code.trees.TreeNode;
+import com.eyhong.code.tree.TreeNode;
 
 public class MinDepthBinaryTree {
     public int minDepth(TreeNode root) {
